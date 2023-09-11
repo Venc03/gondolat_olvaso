@@ -39,7 +39,7 @@ public class Main {
 
     }
 
-    public static String Melyik() {
+    public static void Melyik() {
 
         Scanner src = new Scanner(System.in);
         boolean jo;
@@ -49,12 +49,36 @@ public class Main {
             jo = oszlop >= 1 && oszlop <= 3;
         } while (!jo);
 
-        return null;
-
     }
 
     public static void Kever() {
-
+            switch(1){
+                case 1:
+                    for (i < 7){
+                        [i] = 20-(i-1)*3;
+                        break;
+                    }
+                case 2:
+                    [i+7] = 19-(i-1)*3;
+                    break;
+                case 3:
+                    [i+14] = 21-(i-1)*3;
+                    break;  
+            }
+            
+            switch(2){
+                case 1:
+                    [i] = 19-(i-1)*3;
+                    break;
+                case 2:
+                    [i+7] = 20-(i-1)*3;
+                    break;
+                case 3:
+                    [i+14] = 21-(i-1)*3;
+                    break;  
+            }
+                
+        
     }
 
     public static void EzVolt() {
