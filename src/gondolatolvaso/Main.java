@@ -32,13 +32,17 @@ public class Main {
         }
 
         for (int j = 0; j < pakli.length; j++) {
+
             System.out.println(pakli[j] + "   " + j);
+         
 
         }
 
     }
 
     public static int Melyik() {
+
+   
 
         Scanner src = new Scanner(System.in);
         boolean jo;
@@ -53,6 +57,48 @@ public class Main {
     }
 
     public static void Kever(int hanyadik) {
+        
+        
+    //switch 1, 2, 3 nincs kesz
+        //----------------------------------------
+        switch (1) {
+            case 1:
+                for (int i = 1; i < 7; i++) {
+                    [i] = 20 - (i - 1)*3;
+                }
+                        break;
+            case 2:
+                [i + 7] = 19-(i - 1)*3;
+                    break;
+            case 3:
+                [i + 14] = 21-(i - 1)*3;
+                    break;
+        }
+
+        switch (2) {
+            case 1:
+                [i
+                ] = 19-(i - 1
+                )*3;
+                    break;
+            case 2:
+                [i + 7
+                ] = 20-(i - 1
+                )*3;
+                    break;
+            case 3:
+                [i + 14
+                ] = 21-(i - 1
+                )*3;
+                    break;
+        }
+
+        int oszlop = 2;
+        switch (oszlop) {
+            case 3:
+
+        }
+    
         
         String valasztott = "";
         
@@ -73,7 +119,7 @@ public class Main {
     }
 
     public static void EzVolt() {
+        //ures, kell egy kiiro kod
 
-    }
-
+}
 }
