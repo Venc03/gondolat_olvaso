@@ -1,20 +1,46 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package gondolatolvaso;
 
-/**
- *
- * @author vegi.d.mark
- */
+import java.util.Scanner;
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+    static String[] pakli = new String[22];
+                    
+    static String[] fajta = new String["P", "M", "Z", "T"];
+                    
+    static String[] szin = new String["Ász","Kir","Fel","X","IX", "VIII"];
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Kirak();
+        Melyik();
+        Kever();
+        EzVolt();
+        
+
+    public static void Kever(){
+        
+       
+        
     }
-    
+        
+    public static String Melyik(){
+        
+    Scanner src = new Scanner(System.in);
+    return null;
+            
+            
+    }
+        
+    public static void Kirak(){
+            
+        
+                    
+    }
+        
+    public static void EzVolt(){
+            
+        
+                    
+    }
+        
 }
