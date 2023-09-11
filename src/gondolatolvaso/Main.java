@@ -5,14 +5,20 @@ public class Main {
 
     public static void main(String[] args) {
         
+        Kirak();
+        Melyik();
+        Kever();
+        EzVolt();
         
-    static String[] pakli = new String[22];
+
+    public static void Kirak(){
+        
+    String[] pakli = new String[22];
                     
-    static String[] szinek = {"P", "M", "Z", "T"};
+    String[] szinek = {"P", "M", "Z", "T"};
                     
-    static String[] ertek = {"Ász","Kir","Fel","X","IX", "VIII"};
+    String[] ertek = {"Ász","Kir","Fel","X","IX", "VIII"};
     
-   
     
     int i = 1;
     for (String szin : szinek) {
@@ -24,27 +30,39 @@ public class Main {
     
         for (int j = 0; j < pakli.length ; j++) {
             String lap = pakli[i];
-            System.out.printf("%-8a", lap);
+            System.out.printf("%-8s", lap);
             if(i % 3 == 0){
                 System.out.println("");
             }
         }
         
-   
+    }
         
-        Scanner src = new Scanner(System.in);
-        boolean jo;
-        do {
-            System.out.println("oszlop(1-3): ");
-            int oszlop = src.nextInt();
-            jo = oszlop >= 1 && oszlop <= 3;
-        }while(!jo);
+    public static String Melyik(){
+        
+    Scanner src = new Scanner(System.in);
+    boolean jo;
+    do {
+        System.out.println("oszlop(1-3): ");
+        int oszlop = src.nextInt();
+        jo = oszlop >= 1 && oszlop <= 3;
+    }while(!jo);
     
+    return null;
             
             
-   
+    }
         
-
-       
+    public static void Kever(){
+            
+        
+                    
+    }
+        
+    public static void EzVolt(){
+            
+        
+                    
+    }
         
 }
