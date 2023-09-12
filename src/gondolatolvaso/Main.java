@@ -19,7 +19,6 @@ public class Main {
         String[] szinek = {"P", "M", "Z", "T"};
         String[] ertekek = {"Asz", "Kir", "Fel", "X", "IX", "VIII"};
         int i = 0;
-        int lap = 0;
         for (String szin : szinek) {
             // 21 lapig rakja be a pakli tömbe
             for (int j = 0; i < 21 && j < ertekek.length; j++) {
@@ -27,9 +26,20 @@ public class Main {
                 i += 1;
             }
         }
+        int sor_s = 0;
         for (int j = 0; j < pakli.length; j++) {
-            System.out.println(pakli[j] + "   " + j);
+            System.out.printf("%15s", pakli[j] + ": " + j, "%15s", sor_s + 1);
+            if (j % 3 == 0) {
+                System.out.println();
+                sor_s++;
+            }
+            
         }
+        System.out.println();
+        for (int g = 0; g < 45; g++) {
+            System.out.print("_");
+        }
+        System.out.println();
 
     }
 
@@ -108,6 +118,7 @@ public class Main {
     
 
     private static void keveresKiiras(int[] kevertPakliIndex) {
+        System.out.println();
         for (int oszlop = 0; oszlop < 3; oszlop++) {
             System.out.printf("%9s", oszlop + 1);
         }
