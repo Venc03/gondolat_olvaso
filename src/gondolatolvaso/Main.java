@@ -17,9 +17,8 @@ public class Main {
     public static void Kirak() {
 
         String[] szinek = {"P", "M", "Z", "T"};
-        String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
+        String[] ertekek = {"Asz", "Kir", "Fel", "X", "IX", "VIII"};
         int i = 0;
-        int lap = 0;
         for (String szin : szinek) {
             // 21 lapig rakja be a pakli tömbe
             for (int j = 0; i < 21 && j < ertekek.length; j++) {
@@ -27,9 +26,20 @@ public class Main {
                 i += 1;
             }
         }
+        int sor_s = 0;
         for (int j = 0; j < pakli.length; j++) {
-            System.out.println(pakli[j] + "   " + j);
+            System.out.printf("%15s", pakli[j] + ": " + j, "%15s", sor_s + 1);
+            if (j % 3 == 0) {
+                System.out.println();
+                sor_s++;
+            }
+            
         }
+        System.out.println();
+        for (int g = 0; g < 45; g++) {
+            System.out.print("_");
+        }
+        System.out.println();
 
     }
 
@@ -50,47 +60,6 @@ public class Main {
 
     public static void Kever(int oszlopId) {
 
-        //switch 1, 2, 3 nincs kesz
-        //----------------------------------------
-        /*    switch (1) {
-            case 1:
-                for (int i = 1; i < 7; i++) {
-                    [i] = 20 - (i - 1)*3;
-                }
-                        break;
-            case 2:
-                [i + 7] = 19-(i - 1)*3;
-                    break;
-            case 3:
-                [i + 14] = 21-(i - 1)*3;
-                    break;
-        }
-
-        switch (2) {
-            case 1:
-                [i
-                ] = 19-(i - 1
-                )*3;
-                    break;
-            case 2:
-                [i + 7
-                ] = 20-(i - 1
-                )*3;
-                    break;
-            case 3:
-                [i + 14
-                ] = 21-(i - 1
-                )*3;
-                    break;
-        }
-
-        int oszlop = 2;
-        switch (oszlop) {
-            case 3:
-
-        }
-    
-         */
         int[] kevertPakliIndex = new int[21];
         switch (oszlopId) {
             case 1:
@@ -141,6 +110,7 @@ public class Main {
     }
 
     private static void keveresKiiras(int[] kevertPakliIndex) {
+        System.out.println();
         for (int oszlop = 0; oszlop < 3; oszlop++) {
             System.out.printf("%9s", oszlop + 1);
         }
@@ -152,7 +122,7 @@ public class Main {
         int index = 0;
         int sor = 0;
         while (index < pakli.length) {
-            System.out.printf("%9s", kevertPakliIndex[index]);
+            System.out.printf("%9s", pakli[index] + ": " + kevertPakliIndex[index]);
             index ++; 
             if (index % 3 == 0) {
                 System.out.print(" |");
