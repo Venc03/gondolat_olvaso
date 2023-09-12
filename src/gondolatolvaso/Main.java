@@ -59,7 +59,6 @@ public class Main {
     }
 
     public static void Kever(int oszlopId) {
-
         int[] kevertPakliIndex = new int[21];
         switch (oszlopId) {
             case 1:
@@ -72,9 +71,7 @@ public class Main {
                 kevertPakliIndex = keveres3(kevertPakliIndex);
                 break;
         }
-
         keveresKiiras(kevertPakliIndex);
-
     }
 
     public static void EzVolt() {
@@ -100,21 +97,32 @@ public class Main {
     ;
 
     private static int[] keveres1(int[] kevertPakliIndex) {
-
-        return kevertPakliIndex;
+         int kartyaIndex = 18;
+        int valasztott;
+         for (int i = 0; i < kevertPakliIndex.length; i++) {
+            valasztott = kartyaIndex;
+            kevertPakliIndex[i] = valasztott;
+            kartyaIndex += -3;
+            if (kartyaIndex < 0) {
+                kartyaIndex += 22;
+        }
+    }
+          return kevertPakliIndex;
     }
 
     private static int[] keveres2(int[] kevertPakliIndex) {
+         
 
         return kevertPakliIndex;
     }
+    
 
     private static void keveresKiiras(int[] kevertPakliIndex) {
         System.out.println();
         for (int oszlop = 0; oszlop < 3; oszlop++) {
             System.out.printf("%9s", oszlop + 1);
         }
-         System.out.println();
+        System.out.println();
         for (int i = 0; i < 35; i++) {
             System.out.print("_");
         }
@@ -122,13 +130,13 @@ public class Main {
         int index = 0;
         int sor = 0;
         while (index < pakli.length) {
-            System.out.printf("%9s", pakli[index] + ": " + kevertPakliIndex[index]);
-            index ++; 
+            System.out.printf("%9s", kevertPakliIndex[index] + 1);
+            index++;
             if (index % 3 == 0) {
                 System.out.print(" |");
                 System.out.printf("%12s", sor + 1);
                 System.out.println();
-                 sor ++;
+                sor++;
             }
 
         }
