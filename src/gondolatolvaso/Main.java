@@ -15,6 +15,7 @@ public class Main {
     }
 
     public static void Kirak() {
+        System.out.println("Válasszon egy lapot és annak a oszlopát jelezze vissza nekünk!");
 
         String[] szinek = {"P", "M", "Z", "T"};
         String[] ertekek = {"Asz", "Kir", "Fel", "X", "IX", "VIII"};
@@ -49,7 +50,7 @@ public class Main {
         boolean jo;
         int oszlop = 0;
         do {
-            System.out.print("oszlop(1-3): ");
+            System.out.print("A választott  lap oszlopa(1-3): ");
             oszlop = src.nextInt();
             System.out.println("");
             jo = oszlop >= 1 && oszlop <= 3;
