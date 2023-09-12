@@ -33,7 +33,7 @@ public class Main {
                 System.out.println();
                 sor_s++;
             }
-            
+
         }
         System.out.println();
         for (int g = 0; g < 45; g++) {
@@ -98,25 +98,33 @@ public class Main {
     ;
 
     private static int[] keveres1(int[] kevertPakliIndex) {
-         int kartyaIndex = 18;
+        int kartyaIndex = 18;
         int valasztott;
-         for (int i = 0; i < kevertPakliIndex.length; i++) {
+        for (int i = 0; i < kevertPakliIndex.length; i++) {
             valasztott = kartyaIndex;
             kevertPakliIndex[i] = valasztott;
             kartyaIndex += -3;
             if (kartyaIndex < 0) {
                 kartyaIndex += 22;
+            }
         }
-    }
-          return kevertPakliIndex;
+        return kevertPakliIndex;
     }
 
     private static int[] keveres2(int[] kevertPakliIndex) {
-         
+        int kartyaIndex = 20;
+        int valasztott;
+        for (int i = 0; i < kevertPakliIndex.length; i++) {
+            valasztott = kartyaIndex;
+            kevertPakliIndex[i] = valasztott;
+            kartyaIndex += -3;
+            if (kartyaIndex < 0) {
+                kartyaIndex += 20;
+            }
+        }
 
         return kevertPakliIndex;
     }
-    
 
     private static void keveresKiiras(int[] kevertPakliIndex) {
         System.out.println();
