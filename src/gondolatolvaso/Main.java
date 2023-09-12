@@ -131,7 +131,7 @@ public class Main {
         int index = 0;
         int sor = 0;
         while (index < pakli.length) {
-            System.out.printf("%9s", pakli[kevertPakliIndex[index]] + 1);
+            System.out.printf("%9s", pakli[kevertPakliIndex[index]]);
             index++;
             if (index % 3 == 0) {
                 System.out.print(" |");
