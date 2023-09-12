@@ -29,7 +29,7 @@ public class Main {
         int sor_s = 0;
         for (int j = 0; j < pakli.length; j++) {
             System.out.printf("%15s", pakli[j] + ": " + j, "%15s", sor_s + 1);
-            if (j % 3 == 0) {
+            if ((j + 1)  % 3 == 0) {
                 System.out.println();
                 sor_s++;
             }
@@ -49,8 +49,9 @@ public class Main {
         boolean jo;
         int oszlop = 0;
         do {
-            System.out.println("oszlop(1-3): ");
+            System.out.print("oszlop(1-3): ");
             oszlop = src.nextInt();
+            System.out.println("");
             jo = oszlop >= 1 && oszlop <= 3;
         } while (!jo);
 
@@ -138,7 +139,7 @@ public class Main {
         int index = 0;
         int sor = 0;
         while (index < pakli.length) {
-            System.out.printf("%9s", kevertPakliIndex[index] + 1);
+            System.out.printf("%9s", pakli[kevertPakliIndex[index]] + 1);
             index++;
             if (index % 3 == 0) {
                 System.out.print(" |");
