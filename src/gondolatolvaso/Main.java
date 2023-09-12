@@ -153,8 +153,9 @@ public class Main {
         int sor = 0;
         while (index < pakli.length) {
             System.out.printf("%9s", kevertPakliIndex[index]);
-            index ++;
+            index ++; 
             if (index % 3 == 0) {
+                System.out.print(" |");
                 System.out.printf("%12s", sor + 1);
                 System.out.println();
                  sor ++;
