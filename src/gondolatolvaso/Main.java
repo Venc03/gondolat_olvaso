@@ -17,7 +17,7 @@ public class Main {
     public static void Kirak() {
 
         String[] szinek = {"P", "M", "Z", "T"};
-        String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
+        String[] ertekek = {"Asz", "Kir", "Fel", "X", "IX", "VIII"};
         int i = 0;
         int lap = 0;
         for (String szin : szinek) {
@@ -49,48 +49,6 @@ public class Main {
     }
 
     public static void Kever(int oszlopId) {
-
-        //switch 1, 2, 3 nincs kesz
-        //----------------------------------------
-        /*    switch (1) {
-            case 1:
-                for (int i = 1; i < 7; i++) {
-                    [i] = 20 - (i - 1)*3;
-                }
-                        break;
-            case 2:
-                [i + 7] = 19-(i - 1)*3;
-                    break;
-            case 3:
-                [i + 14] = 21-(i - 1)*3;
-                    break;
-        }
-
-        switch (2) {
-            case 1:
-                [i
-                ] = 19-(i - 1
-                )*3;
-                    break;
-            case 2:
-                [i + 7
-                ] = 20-(i - 1
-                )*3;
-                    break;
-            case 3:
-                [i + 14
-                ] = 21-(i - 1
-                )*3;
-                    break;
-        }
-
-        int oszlop = 2;
-        switch (oszlop) {
-            case 3:
-
-        }
-    
-         */
         int[] kevertPakliIndex = new int[21];
         switch (oszlopId) {
             case 1:
@@ -103,9 +61,7 @@ public class Main {
                 kevertPakliIndex = keveres3(kevertPakliIndex);
                 break;
         }
-
         keveresKiiras(kevertPakliIndex);
-
     }
 
     public static void EzVolt() {
@@ -131,20 +87,31 @@ public class Main {
     ;
 
     private static int[] keveres1(int[] kevertPakliIndex) {
-
-        return kevertPakliIndex;
+         int kartyaIndex = 18;
+        int valasztott;
+         for (int i = 0; i < kevertPakliIndex.length; i++) {
+            valasztott = kartyaIndex;
+            kevertPakliIndex[i] = valasztott;
+            kartyaIndex += -3;
+            if (kartyaIndex < 0) {
+                kartyaIndex += 22;
+        }
+    }
+          return kevertPakliIndex;
     }
 
     private static int[] keveres2(int[] kevertPakliIndex) {
+         
 
         return kevertPakliIndex;
     }
+    
 
     private static void keveresKiiras(int[] kevertPakliIndex) {
         for (int oszlop = 0; oszlop < 3; oszlop++) {
             System.out.printf("%9s", oszlop + 1);
         }
-         System.out.println();
+        System.out.println();
         for (int i = 0; i < 35; i++) {
             System.out.print("_");
         }
@@ -152,13 +119,13 @@ public class Main {
         int index = 0;
         int sor = 0;
         while (index < pakli.length) {
-            System.out.printf("%9s", kevertPakliIndex[index]);
-            index ++; 
+            System.out.printf("%9s", kevertPakliIndex[index] + 1);
+            index++;
             if (index % 3 == 0) {
                 System.out.print(" |");
                 System.out.printf("%12s", sor + 1);
                 System.out.println();
-                 sor ++;
+                sor++;
             }
 
         }
