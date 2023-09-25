@@ -63,68 +63,68 @@ public class Main {
     }
 
     public static void Kever(int oszlopId) {
-        int[] kevertPakliIndex = new int[21];
+        String[] kevertPakli;
         switch (oszlopId) {
             case 1:
-                kevertPakliIndex = keveres1(kevertPakliIndex);
+                pakli = keveres1(kevertPakli);
                 break;
             case 2:
-                kevertPakliIndex = keveres2(kevertPakliIndex);
+                pakli = keveres2(kevertPakli);
                 break;
             case 3:
-                kevertPakliIndex = keveres3(kevertPakliIndex);
+                pakli = keveres3(kevertPakli);
                 break;
         }
-        keveresKiiras(kevertPakliIndex);
+        keveresKiiras(kevertPakli);
     }
 
     public static void EzVolt() {
         System.out.println("Ez volt a választótt kártyád: " + pakli[11]);
     }
 
-    private static int[] keveres3(int[] kevertPakliIndex) {
+    private static String[] keveres3(String[] kevertPakli) {
         int kartyaIndex = 20;
-        int valasztott;
-        for (int i = 0; i < kevertPakliIndex.length; i++) {
-            valasztott = kartyaIndex;
-            kevertPakliIndex[i] = valasztott;
+        String valasztott;
+        for (int i = 0; i < pakli.length; i++) {
+            valasztott = pakli[kartyaIndex];
+            kevertPakli[i] = valasztott;
             kartyaIndex += -3;
             if (kartyaIndex < 0) {
                 kartyaIndex += 20;
             }
         }
-        return kevertPakliIndex;
+        return kevertPakli;
     }
 
     
 
-    private static int[] keveres1(int[] kevertPakliIndex) {
+    private static String[] keveres1(String[] kevertPakli) {
         int kartyaIndex = 18;
-        int valasztott;
-        for (int i = 0; i < kevertPakliIndex.length; i++) {
-            valasztott = kartyaIndex;
-            kevertPakliIndex[i] = valasztott;
+        String valasztott;
+        for (int i = 0; i < pakli.length; i++) {
+            valasztott = pakli[kartyaIndex];
+            kevertPakli[i] = valasztott;
             kartyaIndex += -3;
             if (kartyaIndex < 0) {
                 kartyaIndex += 22;
             }
         }
-        return kevertPakliIndex;
+        return kevertPakli;
     }
 
-    private static int[] keveres2(int[] kevertPakliIndex) {
+    private static int[] keveres2(String[] kevertPakli) {
         int kartyaIndex = 20;
         int valasztott;
-        for (int i = 0; i < kevertPakliIndex.length; i++) {
+        for (int i = 0; i < kevertPakli.length; i++) {
             valasztott = kartyaIndex;
-            kevertPakliIndex[i] = valasztott;
+            kevertPakli[i] = valasztott;
             kartyaIndex += -3;
             if (kartyaIndex < 0) {
                 kartyaIndex += 20;
             }
         }
 
-        return kevertPakliIndex;
+        return kevertPakli;
     }
 
     private static void keveresKiiras(int[] kevertPakliIndex) {
